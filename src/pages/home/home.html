@@ -1,14 +1,25 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      Knockoff Spotify Playlist
     </ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+<ion-content>
+  <ion-list no-lines>
+    <ion-item-divider color="light">Rock and Roll brotha
+    </ion-item-divider>
+      <ion-item *ngFor="let rock of rockandroll">{{rock.title}}</ion-item>
+  </ion-list>
+  <ion-list no-lines>
+    <ion-item-divider color="light">Country Livin'
+    </ion-item-divider>
+    <ion-item *ngFor="let songs of country">{{songs.title}}</ion-item>
+  </ion-list>
+  <ion-list no-lines>
+    <ion-item-divider color="light">Broadway Life
+    </ion-item-divider>
+    <ion-item *ngFor="let music of musical">{{music.title}}</ion-item>
+  </ion-list>
 </ion-content>

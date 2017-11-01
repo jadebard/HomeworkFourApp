@@ -1,0 +1,51 @@
+import { Injectable } from '@angular/core';
+import { Http } from '@angular/http';
+import 'rxjs/add/operator/map';
+
+/*
+  Generated class for the DataProvider provider.
+
+  See https://angular.io/guide/dependency-injection for more info on providers
+  and Angular DI.
+*/
+@Injectable()
+export class DataProvide {
+
+    myListData = {
+        "RockandRoll": [
+            {title: "ACDC"},
+            {title: "Led Zepplin"},
+            {title: "Def Leppard"},
+            {title: "Motley Crue"}
+            ],
+        "Country": [
+            {title: "Zac Brown Band"},
+            {title: "Rascal Flatts"},
+            {title: "Tim McGraw"}
+            ],
+        "Musicals": [
+            {title: "Newsies"},
+            {title: "Hamilton"},
+            {title: "Rent"},
+            {title: "Dear Evan Hansen"}
+
+        ]
+    }
+
+  constructor() {
+
+  }
+
+    getRockData() {
+        return this.myListData.RockandRoll
+    }
+
+    getCountryData() {
+        return this.myListData.Country
+    }
+
+    getMusicalData() {
+        return this.myListData.Musicals
+    }
+
+}

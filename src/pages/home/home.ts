@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
+import {DataProvide} from "../../providers/data/data";
+
 
 @Component({
   selector: 'page-home',
@@ -7,8 +9,14 @@ import { NavController } from 'ionic-angular';
 })
 export class HomePage {
 
-  constructor(public navCtrl: NavController) {
+  rockandroll: {};
+  country: {};
+  musical: {};
 
+  constructor(public navCtrl: NavController, public dataService: DataProvide) {
+      this.rockandroll = this.dataService.getRockData();
+      this.country = this.dataService.getCountryData();
+      this.musical = this.dataService.getMusicalData();
   }
 
 }
